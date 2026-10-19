@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ردا · REDA — Men's Wear</title>
+
+
+<style>
+:root{--bg:#121316;--bg2:#191b20;--panel:#1f2228;--line:rgba(216,195,160,.16);--sand:#d8c3a0;--sand2:#efe2c8;--ink:#eceae5;--mut:#9a9aa3;--ac:#c9a56a;--ok:#6fbf8b;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Vazirmatn',system-ui,sans-serif;line-height:1.7;padding-bottom:74px;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Reem Kufi','Vazirmatn',sans-serif;font-weight:600;line-height:1.3}
+html[lang=en] h1,html[lang=en] h2,html[lang=en] h3,html[lang=en] .disp,html[lang=en] .logo{font-family:'Cormorant Garamond',serif;font-weight:700}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+input,select{font:inherit;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:40;background:rgba(18,19,22,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:60px;gap:10px}
+.logo{font-family:'Reem Kufi';font-size:24px;color:var(--sand2);letter-spacing:.5px;display:flex;align-items:baseline;gap:7px}
+.logo small{font-size:12px;letter-spacing:3px;color:var(--ac);font-family:'Vazirmatn'}
+.dnav{display:none;gap:22px;font-size:15px;color:var(--mut)}.dnav a:hover{color:var(--sand2)}
+@media(min-width:900px){.dnav{display:flex}}
+.hdr-r{display:flex;align-items:center;gap:8px}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;font-size:12.5px}
+.lang button{padding:5px 10px;color:var(--mut)}.lang button.on{background:var(--sand);color:#1a1509;font-weight:700}
+.ic{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;position:relative;border:1px solid var(--line)}
+.ic svg{width:20px;height:20px;stroke:var(--sand2);fill:none;stroke-width:1.7}
+.badge{position:absolute;top:-4px;inset-inline-end:-4px;background:var(--ac);color:#1a1509;font-size:11px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:grid;place-items:center;padding:0 4px}
+.hero{padding:38px 0 30px;background:radial-gradient(900px 480px at 80% 0,#2b2a28 0,#17181b 60%,#121316 100%)}
+.hero h1{font-size:clamp(30px,5.6vw,56px);color:#fff;margin-bottom:10px}.hero h1 em{font-style:normal;color:var(--sand)}
+.hero p.sub{color:var(--mut);max-width:620px;font-size:15.5px;margin-bottom:20px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.btn{padding:11px 20px;border-radius:99px;font-weight:600;font-size:14.5px;border:1px solid var(--line);transition:.2s}
+.btn.pri{background:var(--sand);color:#1a1509;border-color:var(--sand)}.btn.pri:hover{background:var(--sand2)}
+.btn:not(.pri):hover{border-color:var(--sand)}
+.btn.wa{background:#25a65b;border-color:#25a65b;color:#fff}
+.strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.strip::-webkit-scrollbar{height:4px}.strip::-webkit-scrollbar-thumb{background:var(--line)}
+.strip .sc{flex:0 0 150px;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--panel);scroll-snap-align:start;cursor:pointer;border:1px solid var(--line)}
+.strip img{width:100%;height:100%;object-fit:cover}
+.feats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:26px 0}
+@media(min-width:800px){.feats{grid-template-columns:repeat(4,1fr)}}
+.ft{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.ft b{display:block;color:var(--sand2);margin-bottom:3px;font-size:15px}.ft span{color:var(--mut);font-size:13px}
+section{padding:34px 0;scroll-margin-top:64px}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sh h2{font-size:clamp(23px,3.6vw,34px);color:var(--sand2)}.sh p{color:var(--mut);font-size:14px;max-width:560px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.tools input,.tools select,.fld input,.fld select{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 13px;min-width:0}
+.tools input{flex:1;min-width:150px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:12px}
+.chip{flex:none;padding:7px 15px;border-radius:99px;border:1px solid var(--line);font-size:13.5px;color:var(--mut);white-space:nowrap}
+.chip.on{background:var(--sand);color:#1a1509;border-color:var(--sand);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr);gap:16px}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:rgba(216,195,160,.45)}
+.ph{position:relative;aspect-ratio:4/5;background:linear-gradient(160deg,#2a2c33,#1a1c21);overflow:hidden;cursor:pointer}
+.ph img{width:100%;height:100%;object-fit:cover;transition:opacity .35s,transform .5s}
+.ph img+img{position:absolute;inset:0;opacity:0}.card:hover .ph img+img{opacity:1}.card:hover .ph img{transform:scale(1.03)}
+.ph.noimg::after{content:attr(data-l);position:absolute;inset:0;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:42px;color:rgba(216,195,160,.35)}
+.tag{position:absolute;top:8px;inset-inline-start:8px;background:#c0392b;color:#fff;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;z-index:2}
+.cb{padding:11px 12px 12px;display:flex;flex-direction:column;gap:3px;flex:1}
+.cb .br{font-size:11px;letter-spacing:1.5px;color:var(--ac);text-transform:uppercase}
+.cb .nm{font-size:14px;line-height:1.5;min-height:42px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cb .pr{font-weight:700;color:var(--sand2);margin-top:auto;font-size:15px}
+.cb .row{display:flex;gap:6px;margin-top:8px}
+.cb .row button{flex:1;padding:7px 4px;border-radius:10px;border:1px solid var(--line);font-size:12.5px}
+.cb .row .add{background:var(--sand);color:#1a1509;border-color:var(--sand);font-weight:700}
+.empty{text-align:center;color:var(--mut);padding:40px 0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:20px}
+.two{display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}.two>*{min-width:0}@media(min-width:850px){.two{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fld{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;font-size:13.5px;color:var(--mut)}
+.fld.r2{flex-direction:row;gap:10px}.fld.r2>div{flex:1;display:flex;flex-direction:column;gap:5px}
+.opts{display:flex;gap:7px;flex-wrap:wrap}.opt{padding:7px 14px;border-radius:99px;border:1px solid var(--line);font-size:13.5px;color:var(--ink)}.opt.on{background:var(--sand);color:#1a1509;border-color:var(--sand);font-weight:700}
+.res{display:none}.res.show{display:block}
+.big{font-family:'Cormorant Garamond',serif;font-size:64px;line-height:1;color:var(--sand);font-weight:700}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.kv div{background:var(--bg2);border-radius:12px;padding:10px;text-align:center}.kv b{display:block;font-size:20px;color:var(--sand2)}.kv span{font-size:12px;color:var(--mut)}
+.note{font-size:12.5px;color:var(--mut);margin-top:8px}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.mini .card{font-size:12px}.mini .nm{font-size:12px;min-height:36px}
+.slots{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(min-width:850px){.slots{grid-template-columns:repeat(4,1fr)}}
+.slot{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;position:relative}
+.slot .ph{aspect-ratio:3/4;cursor:default}
+.slot .sl{position:absolute;top:8px;inset-inline-start:8px;z-index:2;background:rgba(0,0,0,.6);padding:1px 10px;border-radius:99px;font-size:12px}
+.slot .nv{display:flex;align-items:center;justify-content:space-between;padding:6px 8px;gap:4px}
+.slot .nv button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);font-size:16px}
+.slot .nv span{font-size:12.5px;text-align:center;line-height:1.35;flex:1}
+.tot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:14px}
+.tot b{font-size:22px;color:var(--sand2)}
+.mirror{position:relative;background:#0c0d0f;border:1px dashed var(--line);border-radius:18px;min-height:340px;display:grid;place-items:center;overflow:hidden;touch-action:none}
+.mirror canvas[hidden]{display:none}.mirror canvas{max-width:100%;max-height:68vh;display:block}
+.mirror .hint{color:var(--mut);text-align:center;padding:20px;font-size:14px}
+.busy{position:absolute;inset:0;background:rgba(10,10,12,.72);display:grid;place-items:center;text-align:center;padding:20px;font-size:14px;color:var(--sand2)}.busy[hidden]{display:none}.lay{display:inline-flex;gap:6px;align-items:center}.pick{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px}
+.pick img{width:62px;height:78px;object-fit:cover;border-radius:10px;border:2px solid transparent;flex:none;cursor:pointer;background:var(--bg2)}.pick img.on{border-color:var(--sand)}
+input[type=range]{width:100%;accent-color:var(--sand)}
+.beta{display:inline-block;background:rgba(201,165,106,.15);color:var(--sand);border:1px solid var(--line);font-size:11.5px;padding:1px 9px;border-radius:99px;margin-inline-start:8px;vertical-align:middle;font-family:'Vazirmatn'}
+footer{padding:30px 0 20px;border-top:1px solid var(--line);color:var(--mut);font-size:13.5px;text-align:center}
+.bar{position:fixed;bottom:0;inset-inline:0;z-index:45;background:rgba(18,19,22,.95);border-top:1px solid var(--line);padding:9px 14px calc(9px + env(safe-area-inset-bottom));display:flex;gap:10px;backdrop-filter:blur(10px)}
+.bar a,.bar button{flex:1;text-align:center;padding:11px;border-radius:99px;font-weight:700;font-size:14px}
+.bar .w{background:#25a65b;color:#fff}.bar .c{background:var(--sand);color:#1a1509}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:60;display:none;align-items:center;justify-content:center;padding:14px}.ov.show{display:flex}
+.md{background:var(--bg2);border:1px solid var(--line);border-radius:22px;width:min(880px,100%);max-height:92vh;overflow:auto;position:relative;display:grid}
+@media(min-width:760px){.md{grid-template-columns:1fr 1fr}}
+.md .x{position:absolute;top:10px;inset-inline-end:10px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.6);font-size:18px}
+.md .gal{background:#0e0f12;display:flex;flex-direction:column}.md .gal>img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.md .th{display:flex;gap:6px;padding:8px}.md .th img{width:54px;height:68px;object-fit:cover;border-radius:8px;cursor:pointer;opacity:.6}.md .th img.on{opacity:1;outline:2px solid var(--sand)}
+.md .in{padding:22px 20px;display:flex;flex-direction:column;gap:10px}
+.md .in h3{font-size:21px}.md .in .pr{font-size:24px;color:var(--sand2);font-weight:700}
+.szs{display:flex;gap:7px;flex-wrap:wrap}.sz{min-width:44px;text-align:center;padding:7px 10px;border-radius:10px;border:1px solid var(--line);font-size:14px}.sz.on{background:var(--sand);color:#1a1509;border-color:var(--sand);font-weight:700}
+.dr{position:fixed;top:0;bottom:0;inset-inline-end:0;width:min(420px,100%);background:var(--bg2);z-index:70;transform:translateX(110%);transition:.3s;display:flex;flex-direction:column;border-inline-start:1px solid var(--line)}
+[dir=rtl] .dr{transform:translateX(-110%)}.dr.show{transform:none!important}
+.dr .h{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--line)}
+.dr .l{flex:1;overflow:auto;padding:10px 14px}
+.ci{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.ci img{width:56px;height:70px;object-fit:cover;border-radius:8px;flex:none;background:var(--panel)}
+.ci .q{display:flex;gap:6px;align-items:center;margin-top:4px}.ci .q button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line)}
+.dr .f{padding:14px;border-top:1px solid var(--line)}
+.toast{position:fixed;bottom:84px;inset-inline:0;margin:auto;width:max-content;max-width:90vw;background:var(--sand);color:#1a1509;padding:8px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:90;opacity:0;pointer-events:none;transition:.3s}.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<header><div class="wrap hd">
+ <div class="logo"><span data-t="brand"></span><small>REDA</small></div>
+ <nav class="dnav"><a href="#shop" data-t="n_shop"></a><a href="#size" data-t="n_size"></a><a href="#outfit" data-t="n_out"></a><a href="#tryon" data-t="n_try"></a></nav>
+ <div class="hdr-r">
+  <div class="lang"><button data-l="fa">فا</button><button data-l="ar">ع</button><button data-l="en">EN</button></div>
+  <button class="ic" id="cartBtn" aria-label="cart"><svg viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="badge" id="cnt">0</span></button>
+ </div>
+</div></header>
+
+<div class="hero"><div class="wrap">
+ <h1 data-th="h1"></h1>
+ <p class="sub" data-t="sub"></p>
+ <div class="cta"><a class="btn pri" href="#shop" data-t="c_shop"></a><a class="btn" href="#size" data-t="c_size"></a><a class="btn" href="#tryon" data-t="c_try"></a></div>
+ <div class="strip" id="strip"></div>
+</div></div>
+
+<div class="wrap">
+ <div class="feats">
+  <div class="ft"><b data-t="f1t"></b><span data-t="f1d"></span></div>
+  <div class="ft"><b data-t="f2t"></b><span data-t="f2d"></span></div>
+  <div class="ft"><b data-t="f3t"></b><span data-t="f3d"></span></div>
+  <div class="ft"><b data-t="f4t"></b><span data-t="f4d"></span></div>
+ </div>
+
+ <section id="shop">
+  <div class="sh"><h2 data-t="n_shop"></h2><p data-t="shop_d"></p></div>
+  <div class="tools"><input id="q" type="search" data-ph="search"><select id="sort"><option value="0" data-t="s0"></option><option value="1" data-t="s1"></option><option value="2" data-t="s2"></option><option value="3" data-t="s3"></option></select></div>
+  <div class="chips" id="chips"></div>
+  <div class="note" id="count" style="margin:0 0 10px"></div>
+  <div class="grid" id="grid"></div>
+ </section>
+
+ <section id="size">
+  <div class="sh"><h2 data-t="n_size"></h2><p data-t="size_d"></p></div>
+  <div class="two">
+   <div class="panel">
+    <div class="fld r2"><div><label data-t="h"></label><input id="sh" type="number" value="175" min="140" max="210"></div><div><label data-t="w"></label><input id="sw" type="number" value="78" min="40" max="160"></div></div>
+    <div class="fld"><label data-t="build"></label><div class="opts" id="obuild"></div></div>
+    <div class="fld"><label data-t="fit"></label><div class="opts" id="ofit"></div></div>
+    <button class="btn pri" id="sgo" data-t="calc"></button>
+    <p class="note" data-t="size_note"></p>
+   </div>
+   <div class="panel res" id="sres"></div>
+  </div>
+ </section>
+
+ <section id="outfit">
+  <div class="sh"><h2 data-t="n_out"></h2><p data-t="out_d"></p></div>
+  <div class="chips" id="ostyle"></div>
+  <div class="slots" id="slots"></div>
+  <div class="tot"><div><span class="note" data-t="total"></span><br><b id="otot">0</b></div>
+   <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="oshuf" data-t="shuffle"></button><button class="btn pri" id="oadd" data-t="addall"></button></div></div>
+ </section>
+
+ <section id="tryon">
+  <div class="sh"><h2><span data-t="n_try"></span><span class="beta">BETA</span></h2><p data-t="try_d"></p></div>
+  <div class="two">
+   <div>
+    <div class="mirror" id="mirror"><div class="hint" id="thint"></div><canvas id="cv" hidden></canvas><div class="busy" id="busy" hidden></div></div>
+    <div class="note" id="tstat" style="margin-top:8px"></div>
+   </div>
+   <div class="panel">
+    <div class="fld"><label data-t="t1"></label><input type="file" id="file" accept="image/*"></div>
+    <div class="fld"><label data-t="t2"></label><div class="pick" id="pick"></div></div>
+    <div class="fld"><label data-t="t8"></label><div class="opts" id="layers"></div></div>
+    <div class="fld"><label data-t="t3"></label><input type="range" id="tsc" min="70" max="140" value="100"></div>
+    <div class="opts" style="margin-bottom:12px"><button class="opt" id="twear" data-t="t9"></button><button class="opt" id="tclr" data-t="t10"></button><button class="opt" id="tdl" data-t="t6"></button><button class="opt" id="tadd" data-t="t7"></button></div>
+    <p class="note" data-t="try_note"></p>
+   </div>
+  </div>
+ </section>
+</div>
+
+<footer><div class="wrap"><div class="disp" style="font-size:20px;color:var(--sand2);margin-bottom:6px"><span data-t="brand"></span> · REDA</div><div data-t="foot"></div><div style="margin-top:6px" dir="ltr">WhatsApp: 0782 324 7316</div></div></footer>
+
+<div class="bar"><a class="w" id="barwa" target="_blank" rel="noopener" data-t="wa"></a><button class="c" id="barcart" data-t="cart"></button></div>
+<div class="ov" id="ov"><div class="md" id="md"></div></div>
+<div class="dr" id="dr"><div class="h"><b class="disp" data-t="cart"></b><button class="ic" id="dx">✕</button></div><div class="l" id="cl"></div><div class="f" id="cf"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const D=[{"s":"shirt","fa":"شکت دو جیب چهارخونه پشمی","ar":"قميص C52003","en":"Shirt C52003","br":"Reda","p":1600000,"im":["images/mens_001.webp","images/mens_002.webp"],"z":["1","2","3"],"d":0,"id":1,"c":"shirt","st":"C"},{"s":"shirt","fa":"شکت نیما فوتر","ar":"قميص C52007","en":"Shirt C52007","br":"Reda","p":2620000,"im":["images/mens_003.webp","images/mens_004.webp"],"z":["L","XL","2XL","3XL"],"d":0,"id":2,"c":"shirt","st":"C"},{"s":"shirt","fa":"پیراهن مردانه لیوسل","ar":"قميص P52029","en":"Shirt P52029","br":"Reda","p":785000,"im":["images/mens_005.webp","images/mens_006.webp"],"z":["L","XL","2XL"],"d":0,"id":3,"c":"shirt","st":"C"},{"s":"shirt","fa":"پیراهن کتان دو جیب","ar":"قميص P52058","en":"Shirt P52058","br":"Reda","p":1615000,"im":["images/mens_007.webp","images/mens_008.webp"],"z":["1","2","3","4"],"d":0,"id":4,"c":"shirt","st":"C"},{"s":"shirt","fa":"شکت مردانه دو جیب کتان","ar":"قميص C52002","en":"Shirt C52002","br":"Reda","p":1740000,"im":["images/mens_009.webp","images/mens_010.webp"],"z":["1","2","3"],"d":0,"id":5,"c":"shirt","st":"C"},{"s":"shirt","fa":"پیراهن مازراتی مردانه","ar":"قميص P52022","en":"Shirt P52022","br":"Reda","p":775000,"im":["images/mens_011.webp","images/mens_012.webp"],"z":["L","XL","2XL"],"d":0,"id":6,"c":"shirt","st":"C"},{"s":"polo","fa":"تیشرت مردانه ماکان","ar":"بولو T52163","en":"Polo T52163","br":"Reda","p":970000,"im":["images/mens_013.webp","images/mens_014.webp"],"z":["XL","2XL","3XL"],"d":0,"id":7,"c":"tee","st":"CS"},{"s":"polo","fa":"تیشرت جودون","ar":"بولو T20687","en":"Polo T20687","br":"Reda","p":650000,"im":["images/mens_015.webp","images/mens_016.webp"],"z":["L","XL","2XL"],"d":0,"id":8,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت لانگ مردانه پنبه","ar":"تيشيرت T52326","en":"T-shirt T52326","br":"Reda","p":840000,"im":["images/mens_017.webp","images/mens_018.webp"],"z":["XL","2XL","3XL"],"d":0,"id":9,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت مردانه ویلیون","ar":"تيشيرت T52237","en":"T-shirt T52237","br":"Reda","p":940000,"im":["images/mens_019.webp","images/mens_020.webp"],"z":["XL","2XL","3XL"],"d":0,"id":10,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت لانگ گلکسی","ar":"تيشيرت T52354","en":"T-shirt T52354","br":"Reda","p":995000,"im":["images/mens_021.webp","images/mens_022.webp"],"z":["1","2","3"],"d":0,"id":11,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت لانگ گلکسی کاتری","ar":"تيشيرت T52352","en":"T-shirt T52352","br":"Reda","p":1065000,"im":["images/mens_023.webp","images/mens_024.webp"],"z":["1","2","3"],"d":0,"id":12,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت مردانه ماکان","ar":"تيشيرت T52049","en":"T-shirt T52049","br":"Reda","p":770000,"im":["images/mens_025.webp","images/mens_026.webp"],"z":["XL","2XL","3XL"],"d":0,"id":13,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت لانگ مردانه دمورا","ar":"تيشيرت T52223","en":"T-shirt T52223","br":"Reda","p":1035000,"im":["images/mens_027.webp","images/mens_028.webp"],"z":["XL","2XL","3XL"],"d":0,"id":14,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت لانگ مردانه ماکان","ar":"تيشيرت T52345","en":"T-shirt T52345","br":"Reda","p":830000,"im":["images/mens_029.webp","images/mens_030.webp"],"z":["1","2","3"],"d":0,"id":15,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت دورس","ar":"تيشيرت T52203","en":"T-shirt T52203","br":"Reda","p":815000,"im":["images/mens_031.webp","images/mens_032.webp"],"z":["XL","2XL","3XL"],"d":0,"id":16,"c":"tee","st":"CS"},{"s":"tee","fa":"تیشرت لانگ مردانه","ar":"تيشيرت T52348","en":"T-shirt T52348","br":"Reda","p":970000,"im":["images/mens_033.webp","images/mens_034.webp"],"z":["1","2","3"],"d":0,"id":17,"c":"tee","st":"CS"},{"s":"leather","fa":"کاپشن چرم مردانه","ar":"جاكيت جلد C42014","en":"Leather jacket C42014","br":"Reda","p":1995000,"im":["images/mens_035.webp","images/mens_036.webp"],"z":["M","L","XL","2XL"],"d":0,"id":18,"c":"outer","st":"C"},{"s":"knit","fa":"بلوز ساده مردانه سلانیک","ar":"بلوز B52020","en":"Sweatshirt B52020","br":"Reda","p":1565000,"im":["images/mens_037.jpg","images/mens_038.webp"],"z":["1","2","3","4"],"d":0,"id":19,"c":"knit","st":"SC"},{"s":"knit","fa":"بلوز نیم‌زیپ سه‌نخ","ar":"بلوز B52022","en":"Sweatshirt B52022","br":"Reda","p":2295000,"im":["images/mens_039.webp","images/mens_040.webp"],"z":["XL","2XL","3XL","4XL"],"d":0,"id":20,"c":"knit","st":"SC"},{"s":"knit","fa":"بلوز ساده مردانه سلانیک","ar":"بلوز B52015","en":"Sweatshirt B52015","br":"Reda","p":2180000,"im":["images/mens_041.webp","images/mens_042.webp"],"z":["1","2","3","4"],"d":0,"id":21,"c":"knit","st":"SC"},{"s":"knit","fa":"بلوز سه‌نخ چاپی","ar":"بلوز B52033","en":"Sweatshirt B52033","br":"Reda","p":1833000,"im":["images/mens_043.webp","images/mens_044.webp"],"z":["XL","2XL","3XL","4XL"],"d":0,"id":22,"c":"knit","st":"SC"},{"s":"knit","fa":"بلوز دورس سه‌نخ","ar":"بلوز B52039","en":"Sweatshirt B52039","br":"Reda","p":2205000,"im":["images/mens_045.webp","images/mens_046.webp"],"z":["1","2","3"],"d":0,"id":23,"c":"knit","st":"SC"},{"s":"knit","fa":"بلوز دورس مردانه","ar":"بلوز B52035","en":"Sweatshirt B52035","br":"Reda","p":1500000,"im":["images/mens_047.webp","images/mens_048.webp"],"z":["1","2","3","4"],"d":0,"id":24,"c":"knit","st":"SC"},{"s":"knit","fa":"بلوز دورس مردانه","ar":"بلوز B42103","en":"Sweatshirt B42103","br":"Reda","p":2205000,"im":["images/mens_049.webp","images/mens_050.webp"],"z":["XL","2XL","3XL"],"d":0,"id":25,"c":"knit","st":"SC"},{"s":"jeans","fa":"شلوار جین مام مردانه","ar":"بنطلون جينز E42000","en":"Jeans E42000","br":"Reda","p":1890000,"im":["images/mens_051.webp","images/mens_052.webp"],"z":["31","32","33","34","36"],"d":0,"id":26,"c":"pants","st":"C"},{"s":"jeans","fa":"شلوار جین مام مردانه","ar":"بنطلون جينز E42011","en":"Jeans E42011","br":"Reda","p":1940000,"im":["images/mens_053.webp","images/mens_054.webp"],"z":["31","32","33","34","36"],"d":0,"id":27,"c":"pants","st":"C"},{"s":"jeans","fa":"شلوار جین نیم‌بگ مردانه","ar":"بنطلون جينز E42017","en":"Jeans E42017","br":"Reda","p":2145000,"im":["images/mens_055.webp","images/mens_056.webp"],"z":["31","32","33","34","36","38"],"d":0,"id":28,"c":"pants","st":"C"},{"s":"jeans","fa":"شلوار مردانه نیم‌بگ ذغالی","ar":"بنطلون جينز E42013","en":"Jeans E42013","br":"Reda","p":1625000,"im":["images/mens_057.webp","images/mens_058.webp"],"z":["31","32","33","34","36"],"d":0,"id":29,"c":"pants","st":"C"},{"s":"pants","fa":"شلوار کتان دمپا اسپرت","ar":"بنطلون E10222","en":"Trousers E10222","br":"Reda","p":645000,"im":["images/mens_059.webp","images/mens_060.webp"],"z":["M","L","XL","2XL","3XL","4XL"],"d":0,"id":30,"c":"pants","st":"CS"},{"s":"pants","fa":"شلوار کتان مردانه","ar":"بنطلون E32156","en":"Trousers E32156","br":"Reda","p":660000,"im":["images/mens_061.webp","images/mens_062.webp"],"z":["L","XL","2XL","3XL","4XL","5XL"],"d":0,"id":31,"c":"pants","st":"CS"},{"s":"puffer","fa":"پافر مردانه","ar":"جاكيت منفوخ I20257","en":"Puffer jacket I20257","br":"Reda","p":1270000,"im":["images/mens_063.webp","images/mens_064.webp"],"z":["L","XL","2XL"],"d":0,"id":32,"c":"outer","st":"SC"},{"s":"puffer","fa":"پافر مردانه","ar":"جاكيت منفوخ I42003","en":"Puffer jacket I42003","br":"Reda","p":1650000,"im":["images/mens_065.webp","images/mens_066.webp"],"z":["L","XL","2XL"],"d":0,"id":33,"c":"outer","st":"SC"},{"s":"knit","fa":"سویشرت مردانه","ar":"بلوز S42014","en":"Sweatshirt S42014","br":"Reda","p":2035000,"im":["images/mens_067.webp","images/mens_068.webp"],"z":["XL","2XL","3XL","4XL"],"d":0,"id":34,"c":"knit","st":"SC"},{"s":"knit","fa":"سویشرت مردانه","ar":"بلوز S32023","en":"Sweatshirt S32023","br":"Reda","p":1165000,"im":["images/mens_069.webp","images/mens_070.webp"],"z":["L","XL","2XL","3XL"],"d":0,"id":35,"c":"knit","st":"SC"},{"s":"belt","fa":"کمربند اسپرت مردانه","ar":"حزام Z20987","en":"Belt Z20987","br":"Reda","p":370000,"im":["images/mens_071.webp","images/mens_072.webp"],"z":[],"d":0,"id":36,"c":"acc","st":"CF"},{"s":"belt","fa":"کمربند مردانه","ar":"حزام Z52002","en":"Belt Z52002","br":"Reda","p":225000,"im":["images/mens_073.webp","images/mens_074.webp"],"z":[],"d":0,"id":37,"c":"acc","st":"CF"},{"s":"hat","fa":"کلاه گورین زیپ‌دار","ar":"قبعة U32585","en":"Cap U32585","br":"Reda","p":250000,"im":["images/mens_075.webp","images/mens_076.webp"],"z":[],"d":0,"id":38,"c":"acc","st":"CS"},{"s":"hat","fa":"کلاه کتان گلدوزی نقاب‌دار","ar":"قبعة U30723","en":"Cap U30723","br":"Reda","p":245000,"im":["images/mens_077.webp","images/mens_078.webp"],"z":[],"d":0,"id":39,"c":"acc","st":"CS"},{"s":"blazer","fa":"کت تک مردانه کد 400/82","ar":"سترة MK-COLLECTION","en":"MK-COLLECTION Blazer","br":"MK-COLLECTION","p":18590000,"im":["images/mens_079.jpg"],"z":[],"d":30,"id":40,"c":"outer","st":"F"},{"s":"blazer","fa":"کت لینن Double Pocket","ar":"سترة CORUM","en":"CORUM Blazer","br":"CORUM","p":52889000,"im":["images/mens_080.jpg"],"z":[],"d":60,"id":41,"c":"outer","st":"F"},{"s":"blazer","fa":"کت دو دکمه پشمی 2520202","ar":"سترة CORUM","en":"CORUM Blazer","br":"CORUM","p":58889000,"im":["images/mens_081.jpg"],"z":[],"d":0,"id":42,"c":"outer","st":"F"},{"s":"blazer","fa":"کت دو دکمه 2610251","ar":"سترة CORUM","en":"CORUM Blazer","br":"CORUM","p":46889000,"im":["images/mens_082.jpg"],"z":[],"d":0,"id":43,"c":"outer","st":"F"},{"s":"blazer","fa":"کت دبل برست 2320216","ar":"سترة CORUM","en":"CORUM Blazer","br":"CORUM","p":48889000,"im":["images/mens_083.jpg"],"z":[],"d":60,"id":44,"c":"outer","st":"F"},{"s":"blazer","fa":"کت تک مردانه ساده کد 400/89","ar":"سترة MK-COLLECTION","en":"MK-COLLECTION Blazer","br":"MK-COLLECTION","p":18590000,"im":["images/mens_084.jpg"],"z":[],"d":30,"id":45,"c":"outer","st":"F"},{"s":"jeans","fa":"شلوار جین مردانه آر ان اس RNS کد 2755","ar":"بنطلون جينز RNS","en":"RNS Jeans","br":"RNS","p":5500000,"im":["images/mens_085.avif"],"z":[],"d":30,"id":46,"c":"pants","st":"C"},{"s":"pants","fa":"شلوار 2612506","ar":"بنطلون CORUM","en":"CORUM Trousers","br":"CORUM","p":16889000,"im":["images/mens_086.jpg"],"z":[],"d":50,"id":47,"c":"pants","st":"CS"},{"s":"shirt","fa":"پیراهن راه راه 2620107","ar":"قميص CORUM","en":"CORUM Shirt","br":"CORUM","p":14889000,"im":["images/mens_087.jpg"],"z":[],"d":0,"id":48,"c":"shirt","st":"FC"},{"s":"shirt","fa":"پیراهن مردانه چهارخانه کد 1811","ar":"قميص MK-COLLECTION","en":"MK-COLLECTION Shirt","br":"MK-COLLECTION","p":4490000,"im":["images/mens_088.jpg"],"z":[],"d":35,"id":49,"c":"shirt","st":"FC"},{"s":"shirt","fa":"پیراهن مردانه آستین کوتاه کد M0105","ar":"قميص MK-COLLECTION","en":"MK-COLLECTION Shirt","br":"MK-COLLECTION","p":6950000,"im":["images/mens_089.jpg"],"z":[],"d":25,"id":50,"c":"shirt","st":"FC"},{"s":"shirt","fa":"پیراهن راه راه پهن کد 1890","ar":"قميص MK-COLLECTION","en":"MK-COLLECTION Shirt","br":"MK-COLLECTION","p":4490000,"im":["images/mens_090.jpg"],"z":[],"d":35,"id":51,"c":"shirt","st":"FC"},{"s":"shirt","fa":"پیراهن 2610114","ar":"قميص CORUM","en":"CORUM Shirt","br":"CORUM","p":14889000,"im":["images/mens_091.jpg"],"z":[],"d":40,"id":52,"c":"shirt","st":"FC"},{"s":"coat","fa":"پالتو جیب پاکتی پشمی 2420303","ar":"معطف / جاكيت CORUM","en":"CORUM Coat","br":"CORUM","p":68889000,"im":["images/mens_092.jpg"],"z":[],"d":0,"id":53,"c":"outer","st":"FC"},{"s":"coat","fa":"کاپشن Quilted","ar":"معطف / جاكيت CORUM","en":"CORUM Coat","br":"CORUM","p":46889000,"im":["images/mens_093.jpg"],"z":[],"d":0,"id":54,"c":"outer","st":"FC"},{"s":"leather","fa":"کاپشن چرم مردانه مدل ماربرو - مشکی","ar":"جاكيت جلد CROCO","en":"CROCO Leather jacket","br":"CROCO","p":77990000,"im":["images/mens_094.webp"],"z":[],"d":50,"id":55,"c":"outer","st":"C"},{"s":"jeanjacket","fa":"کت جین مردانه آر ان اس RNS کد 2902","ar":"جاكيت جينز RNS","en":"RNS Denim jacket","br":"RNS","p":8200000,"im":["images/mens_095.avif"],"z":[],"d":0,"id":56,"c":"outer","st":"C"},{"s":"shoe","fa":"کفش رسمی مردانه برتونیکس","ar":"حذاء رسمي BERTTONIX","en":"BERTTONIX Dress shoes","br":"BERTTONIX","p":24800000,"im":["images/mens_096.jpg"],"z":[],"d":20,"id":57,"c":"shoes","st":"F"},{"s":"shoe","fa":"کفش دربي مردانه","ar":"حذاء رسمي DORSA","en":"DORSA Dress shoes","br":"DORSA","p":38390000,"im":["images/mens_097.jpg"],"z":[],"d":0,"id":58,"c":"shoes","st":"F"},{"s":"shoe","fa":"کفش کلاسیک چرم مردانه مدل آوید - مشکی","ar":"حذاء رسمي CROCO","en":"CROCO Dress shoes","br":"CROCO","p":26690000,"im":["images/mens_098.webp"],"z":[],"d":60,"id":59,"c":"shoes","st":"F"},{"s":"shoe","fa":"کفش دربي مردانه","ar":"حذاء رسمي DORSA","en":"DORSA Dress shoes","br":"DORSA","p":40390000,"im":["images/mens_099.jpg"],"z":[],"d":0,"id":60,"c":"shoes","st":"F"},{"s":"shoe","fa":"کفش رسمی مردانه برتونیکس","ar":"حذاء رسمي BERTTONIX","en":"BERTTONIX Dress shoes","br":"BERTTONIX","p":17800000,"im":["images/mens_100.jpg"],"z":[],"d":20,"id":61,"c":"shoes","st":"F"},{"s":"sneak","fa":"کتانی (اسنیکرز) مردانه برتونیکس","ar":"حذاء رياضي BERTTONIX","en":"BERTTONIX Sneakers","br":"BERTTONIX","p":16800000,"im":["images/mens_101.jpg"],"z":[],"d":20,"id":62,"c":"shoes","st":"SC"},{"s":"sneak","fa":"کتانی (اسنیکرز) مردانه ادیداس","ar":"حذاء رياضي ADIDAS","en":"ADIDAS Sneakers","br":"ADIDAS","p":38600000,"im":["images/mens_102.jpg"],"z":[],"d":50,"id":63,"c":"shoes","st":"SC"},{"s":"sneak","fa":"کتانی (اسنیکرز) مردانه برتونیکس","ar":"حذاء رياضي BERTTONIX","en":"BERTTONIX Sneakers","br":"BERTTONIX","p":19800000,"im":["images/mens_103.jpg"],"z":[],"d":20,"id":64,"c":"shoes","st":"SC"},{"s":"sneak","fa":"کتانی (اسنیکرز) مردانه برتونیکس","ar":"حذاء رياضي BERTTONIX","en":"BERTTONIX Sneakers","br":"BERTTONIX","p":17200000,"im":["images/mens_104.jpg"],"z":[],"d":5,"id":65,"c":"shoes","st":"SC"},{"s":"sneak","fa":"کتانی (اسنیکرز) مردانه ادیداس","ar":"حذاء رياضي ADIDAS","en":"ADIDAS Sneakers","br":"ADIDAS","p":53000000,"im":["images/mens_105.jpg"],"z":[],"d":50,"id":66,"c":"shoes","st":"SC"},{"s":"loafer","fa":"کفش کالج چرم مردانه مدل آروکو - مشکی","ar":"حذاء لوفر CROCO","en":"CROCO Loafers","br":"CROCO","p":28690000,"im":["images/mens_106.webp"],"z":[],"d":60,"id":67,"c":"shoes","st":"FC"},{"s":"loafer","fa":"کفش کالج مردانه مدل K209 مشکی","ar":"حذاء لوفر MANTE","en":"MANTE Loafers","br":"MANTE","p":28798000,"im":["images/unavailable.svg"],"z":[],"d":40,"id":68,"c":"shoes","st":"FC","imageUnavailable":true},{"s":"loafer","fa":"کفش لوفر مردانه","ar":"حذاء لوفر DORSA","en":"DORSA Loafers","br":"DORSA","p":35790000,"im":["images/mens_108.jpg"],"z":[],"d":0,"id":69,"c":"shoes","st":"FC"},{"s":"loafer","fa":"کفش کالج مردانه مدل K152 مشکی کرو ریز","ar":"حذاء لوفر MANTE","en":"MANTE Loafers","br":"MANTE","p":27998000,"im":["images/mens_109.jpg"],"z":[],"d":40,"id":70,"c":"shoes","st":"FC"}],WA='9647823247316';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const T={
+fa:{brand:'ردا',h1:'لباس مردانه <em>با انتخاب مطمئن</em><br>و پرو آنلاین',sub:'پیراهن، تیشرت، شلوار، کت، کفش و اکسسوری مردانه؛ سایزت را حساب کن، ست کامل بساز و روی عکس خودت امتحان کن. سفارش مستقیم در واتساپ.',
+n_shop:'فروشگاه',n_size:'مشاور سایز',n_out:'ست‌ساز',n_try:'پرو آنلاین',c_shop:'دیدن محصولات',c_size:'سایزم چنده؟',c_try:'پرو آنلاین',
+f1t:'مشاور سایز',f1d:'قد و وزن بده، سایز پیشنهادی بگیر',f2t:'ست‌ساز لباس',f2d:'رسمی، روزمره یا اسپرت؛ ست کامل با قیمت کل',f3t:'پرو روی عکس شما',f3d:'عکس خودت را بگذار و لباس را امتحان کن',f4t:'سفارش در واتساپ',f4d:'سبد خرید یک‌کلیکه به واتساپ فروشگاه',
+shop_d:'روی هر محصول بزنید تا سایزها و عکس‌ها را ببینید.',search:'جستجو در محصولات…',s0:'پیش‌فرض',s1:'ارزان‌ترین',s2:'گران‌ترین',s3:'بیشترین تخفیف',
+all:'همه',shirt:'پیراهن',tee:'تیشرت و پولو',knit:'بلوز و سویشرت',pants:'شلوار',outer:'کت و کاپشن',shoes:'کفش',acc:'اکسسوری',
+add:'افزودن',view:'مشاهده',try:'پرو',items:'محصول',cur:'تومان',size:'سایز',choose:'سایز را انتخاب کنید',free:'سایز را در واتساپ هماهنگ می‌کنیم',addc:'افزودن به سبد',
+cart:'سبد خرید',wa:'واتساپ',empty:'سبد خالی است',sum:'جمع کل',send:'ارسال سفارش در واتساپ',added:'به سبد اضافه شد',none:'محصولی پیدا نشد',
+size_d:'قد، وزن و فرم بدنت را وارد کن؛ سایز تقریبی بالا، شلوار و کفش را بگیر.',h:'قد (سانتی‌متر)',w:'وزن (کیلو)',build:'فرم بدن',
+b1:'لاغر',b2:'متوسط',b3:'شکم‌دار',f_1:'جذب',f_2:'استاندارد',f_3:'گشاد/راحت',calc:'محاسبه سایز',
+size_note:'نتیجه تقریبی است؛ جدول سایز هر برند ممکن است کمی فرق کند. برای اطمینان در واتساپ بپرسید.',r_top:'سایز بالاتنه',r_jean:'سایز شلوار',r_shoe:'سایز کفش (EU)',r_av:'محصولات موجود در این سایز',r_none:'برای این سایز، در واتساپ هماهنگ کنید.',
+out_d:'سبک را انتخاب کن؛ با فلش‌ها هر قطعه را عوض کن و قیمت کل را ببین.',st_F:'رسمی',st_C:'روزمره',st_S:'اسپرت',sl_top:'بالاتنه',sl_bot:'شلوار',sl_shoe:'کفش',sl_out:'کت / کاپشن',total:'جمع ست',shuffle:'ست تصادفی',addall:'افزودن کل ست به سبد',
+t1:'۱. عکس خودت',t4:'شفافیت',t5:'حذف پس‌زمینه سفید',t6:'ذخیره عکس',t7:'افزودن به سبد',
+
+foot:'فروشگاه آنلاین پوشاک مردانه · کربلا — نمونه دمو',wamsg:'سلام، سفارش من:',try_d:"عکس تمام‌قد خودت را بگذار؛ سیستم شانه و کمر و پا را تشخیص می‌دهد و لباس انتخابی را خودکار روی بدنت می‌نشاند. چند لباس را هم‌زمان امتحان کن. (نسخه آزمایشی)",t2:"۲. لباس را انتخاب کن (می‌شود چند تا را روی هم پوشید)",t3:"اندازه لباس انتخاب‌شده (برای تنظیم بیشتر روی عکس بکش)",t8:"لباس‌های روی بدن",t9:"پرو کل ست",t10:"پاک کردن",try_note:"نکته: عکس تمام‌قد، روبه‌رو، با پس‌زمینه ساده و لباس تنگ‌وساده بگیر تا نتیجه بهتر شود. عکس روی دستگاه خودت پردازش می‌شود و ارسال نمی‌شود. این پرو برای تصور اندازه و رنگ است، نه جایگزین امتحان واقعی.",thint:"عکس تمام‌قد خود را انتخاب کنید. بارگذاری هوش تشخیص بدن بار اول چند ثانیه طول می‌کشد.",ld:"در حال آماده‌سازی هوش تشخیص بدن (فقط بار اول)…",fit:"در حال اندازه‌گیری و نشاندن لباس…",fit_ok:"لباس روی بدنت نشست. برای تنظیم دقیق، آن را روی عکس بکش یا اندازه‌اش را تغییر بده.",fit_flat:"در عکس این محصول بدن دیده نمی‌شود؛ لباس با حدس نشسته. با کشیدن تنظیمش کن.",e_cors:"عکس محصول برای پردازش در دسترس نیست (نسخه آنلاین بدون عکس محلی). با نسخه کامل سایت کار می‌کند.",e_ml:"بارگذاری هوش تشخیص بدن ناموفق بود. اینترنت را چک کن و دوباره تلاش کن.",nopose:"بدن در عکس تشخیص داده نشد؛ یک عکس تمام‌قد و روبه‌رو بگذار.",pose_ok:"بدن تشخیص داده شد. حالا لباس را انتخاب کن.",noslot:"این محصول (کمربند/کلاه) هنوز قابل پرو نیست.",needph:"اول عکس خودت را بارگذاری کن.",e_save:"ذخیره ممکن نشد؛ اسکرین‌شات بگیر."},
+ar:{brand:'رداء',h1:'ملابس رجالية <em>باختيار واثق</em><br>وقياس أونلاين',sub:'قمصان، تيشيرتات، بناطيل، جاكيتات، أحذية وإكسسوارات رجالية؛ احسب قياسك، كوّن إطلالة كاملة وجرّبها على صورتك. الطلب مباشرة عبر واتساب.',
+n_shop:'المتجر',n_size:'مستشار القياس',n_out:'منسّق الإطلالة',n_try:'القياس أونلاين',c_shop:'تصفح المنتجات',c_size:'ما هو قياسي؟',c_try:'القياس أونلاين',
+f1t:'مستشار القياس',f1d:'أدخل الطول والوزن واحصل على القياس',f2t:'منسّق الإطلالة',f2d:'رسمي أو يومي أو رياضي مع السعر الكلي',f3t:'قياس على صورتك',f3d:'ضع صورتك وجرّب الملبس',f4t:'الطلب عبر واتساب',f4d:'سلة تُرسل بضغطة إلى واتساب المتجر',
+shop_d:'اضغط على أي منتج لرؤية القياسات والصور.',search:'ابحث في المنتجات…',s0:'الافتراضي',s1:'الأرخص',s2:'الأغلى',s3:'أكبر خصم',
+all:'الكل',shirt:'قمصان',tee:'تيشيرت وبولو',knit:'بلوزات وسويتشيرت',pants:'بناطيل',outer:'جاكيتات وسترات',shoes:'أحذية',acc:'إكسسوارات',
+add:'إضافة',view:'عرض',try:'جرّب',items:'منتج',cur:'د.ع',size:'القياس',choose:'اختر القياس',free:'ننسّق القياس عبر واتساب',addc:'أضف إلى السلة',
+cart:'السلة',wa:'واتساب',empty:'السلة فارغة',sum:'المجموع',send:'إرسال الطلب عبر واتساب',added:'تمت الإضافة للسلة',none:'لا توجد منتجات',
+size_d:'أدخل طولك ووزنك وبنية جسمك لتحصل على قياس تقريبي للأعلى والبنطلون والحذاء.',h:'الطول (سم)',w:'الوزن (كغ)',build:'بنية الجسم',
+b1:'نحيف',b2:'متوسط',b3:'بطن بارز',f_1:'ضيّق',f_2:'عادي',f_3:'واسع/مريح',calc:'احسب القياس',
+size_note:'النتيجة تقريبية وقد تختلف جداول القياس بين الماركات. للتأكد اسألنا عبر واتساب.',r_top:'قياس الأعلى',r_jean:'قياس البنطلون',r_shoe:'قياس الحذاء (EU)',r_av:'منتجات متوفرة بهذا القياس',r_none:'لهذا القياس نتفق عبر واتساب.',
+out_d:'اختر الأسلوب؛ بدّل كل قطعة بالأسهم وشاهد السعر الكلي.',st_F:'رسمي',st_C:'يومي',st_S:'رياضي',sl_top:'الأعلى',sl_bot:'البنطلون',sl_shoe:'الحذاء',sl_out:'جاكيت',total:'مجموع الإطلالة',shuffle:'إطلالة عشوائية',addall:'أضف الإطلالة كاملة للسلة',
+t1:'١. صورتك',t4:'الشفافية',t5:'إزالة الخلفية البيضاء',t6:'حفظ الصورة',t7:'أضف للسلة',
+
+foot:'متجر ملابس رجالية أونلاين · كربلاء — نسخة تجريبية',wamsg:'مرحباً، طلبي:',try_d:"ارفع صورتك بكامل الجسم؛ يتعرّف النظام على الكتفين والخصر والقدمين ويلبسك الملبس تلقائياً. جرّب عدة قطع معاً. (نسخة تجريبية)",t2:"٢. اختر الملبس (يمكن ارتداء عدة قطع)",t3:"حجم الملبس المحدد (اسحبه على الصورة للتعديل)",t8:"الملابس على الجسم",t9:"قياس الطقم كله",t10:"مسح",try_note:"نصيحة: صوّر نفسك كامل الجسم من الأمام بخلفية بسيطة وملابس ضيقة سادة. تُعالج الصورة على جهازك ولا تُرسل. القياس للتصوّر فقط وليس بديلاً عن التجربة الفعلية.",thint:"اختر صورتك بكامل الجسم. تحميل نموذج التعرف على الجسم يستغرق ثوانٍ في المرة الأولى.",ld:"جارٍ تجهيز نموذج التعرف على الجسم (أول مرة فقط)…",fit:"جارٍ قياس الملبس وتركيبه…",fit_ok:"تم تركيب الملبس على جسمك. اسحبه أو غيّر حجمه للضبط الدقيق.",fit_flat:"الجسم غير ظاهر في صورة المنتج؛ تم التركيب تقريبياً. اسحبه للضبط.",e_cors:"صورة المنتج غير متاحة للمعالجة (النسخة الأونلاين بدون صور محلية). تعمل في النسخة الكاملة.",e_ml:"فشل تحميل نموذج التعرف على الجسم. تحقق من الإنترنت وأعد المحاولة.",nopose:"لم يتم التعرف على الجسم؛ ارفع صورة كاملة من الأمام.",pose_ok:"تم التعرف على الجسم. اختر الملبس الآن.",noslot:"هذا المنتج (حزام/قبعة) غير متاح للقياس بعد.",needph:"ارفع صورتك أولاً.",e_save:"تعذر الحفظ؛ التقط لقطة شاشة."},
+en:{brand:'Reda',h1:"Men's wear, <em>chosen with confidence</em><br>with online try-on",sub:'Shirts, tees, trousers, jackets, shoes and accessories. Find your size, build a full outfit and try it on your own photo. Order straight on WhatsApp.',
+n_shop:'Shop',n_size:'Size advisor',n_out:'Outfit builder',n_try:'Try-on',c_shop:'Browse products',c_size:"What's my size?",c_try:'Try on online',
+f1t:'Size advisor',f1d:'Enter height & weight, get your size',f2t:'Outfit builder',f2d:'Formal, casual or sport, with the total price',f3t:'Try on your photo',f3d:'Upload a photo and test the garment',f4t:'Order on WhatsApp',f4d:'One-tap cart to the shop’s WhatsApp',
+shop_d:'Tap any product to see sizes and photos.',search:'Search products…',s0:'Default',s1:'Lowest price',s2:'Highest price',s3:'Biggest discount',
+all:'All',shirt:'Shirts',tee:'Tees & polos',knit:'Sweatshirts',pants:'Trousers',outer:'Jackets & coats',shoes:'Shoes',acc:'Accessories',
+add:'Add',view:'View',try:'Try',items:'items',cur:'IQD',size:'Size',choose:'Choose a size',free:'We confirm the size on WhatsApp',addc:'Add to cart',
+cart:'Cart',wa:'WhatsApp',empty:'Your cart is empty',sum:'Total',send:'Send order on WhatsApp',added:'Added to cart',none:'No products found',
+size_d:'Enter height, weight and build to get an approximate top, trouser and shoe size.',h:'Height (cm)',w:'Weight (kg)',build:'Build',
+b1:'Slim',b2:'Average',b3:'Broad / belly',f_1:'Slim',f_2:'Regular',f_3:'Relaxed',calc:'Calculate size',
+size_note:'This is an estimate; brand size charts differ slightly. Ask us on WhatsApp to be sure.',r_top:'Top size',r_jean:'Trouser size',r_shoe:'Shoe size (EU)',r_av:'In stock in this size',r_none:'For this size, check with us on WhatsApp.',
+out_d:'Pick a style, swap each piece with the arrows and watch the total.',st_F:'Formal',st_C:'Casual',st_S:'Sport',sl_top:'Top',sl_bot:'Trousers',sl_shoe:'Shoes',sl_out:'Jacket',total:'Outfit total',shuffle:'Shuffle',addall:'Add whole outfit to cart',
+t1:'1. Your photo',t4:'Opacity',t5:'Remove white background',t6:'Save image',t7:'Add to cart',
+
+foot:"Online men's clothing store · Karbala — demo",wamsg:'Hello, my order:',try_d:"Upload a full-length photo; the app detects your shoulders, hips and feet and fits the garment on your body automatically. Combine several pieces. (Beta)",t2:"2. Pick garments (you can layer several)",t3:"Selected garment size (drag it on the photo to fine-tune)",t8:"Worn items",t9:"Try the whole outfit",t10:"Clear",try_note:"Tip: a full-length, front-facing photo on a plain background in fitted plain clothes works best. The photo is processed on your device and never uploaded. This is a visual guide, not a replacement for trying on in person.",thint:"Choose your full-length photo. The body-detection model takes a few seconds to load the first time.",ld:"Preparing body detection (first time only)…",fit:"Measuring and fitting the garment…",fit_ok:"Fitted to your body. Drag or resize it to fine-tune.",fit_flat:"No body visible in this product photo, so the fit is approximate. Drag to adjust.",e_cors:"The product photo is not available for processing (online copy without local images). It works in the full version.",e_ml:"Could not load body detection. Check your connection and retry.",nopose:"No body detected; use a full-length front-facing photo.",pose_ok:"Body detected. Now pick a garment.",noslot:"This item (belt/cap) cannot be tried on yet.",needph:"Upload your photo first.",e_save:"Saving blocked; take a screenshot instead."}};
+Object.assign(T.fa,{e_file:'برای اجرای پرو، فایل START_LOCAL.cmd را باز کنید؛ سپس سایت را از نشانی محلی مرورگر اجرا کنید.',e_img:'عکس این محصول برای پرو در دسترس نیست.',e_empty:'لباس قابل استفاده از این تصویر جدا نشد؛ محصول دیگری را امتحان کنید.',e_upload:'فایل تصویر معتبر و کوچک‌تر از ۲۵ مگابایت انتخاب کنید.',e_ml:'مدل تشخیص بدن آماده نشد. سایت را با START_LOCAL.cmd اجرا کنید و کامل بودن فایل‌های مدل را بررسی کنید.'});
+Object.assign(T.ar,{e_file:'شغّل START_LOCAL.cmd وافتح الموقع المحلي.',e_img:'صورة المنتج غير متاحة للتجربة.',e_empty:'تعذّر عزل الملابس؛ اختر منتجاً آخر.',e_upload:'اختر صورة صالحة أصغر من 25 ميغابايت.',e_ml:'تعذّر تحميل النموذج المحلي. شغّل START_LOCAL.cmd وتحقق من ملفات النماذج.'});
+Object.assign(T.en,{e_file:'Run START_LOCAL.cmd and open the local site to use try-on.',e_img:'This product photo is unavailable for try-on.',e_empty:'No usable clothing could be extracted; try another product.',e_upload:'Choose a valid image smaller than 25 MB.',e_ml:'Could not prepare the local model. Run START_LOCAL.cmd and check model files.'});
+const LANGS=['fa','ar','en'];let L='fa';try{L=localStorage.getItem('lg')||'fa'}catch(e){}
+const t=k=>T[L][k]||k;
+const name=x=>L=='fa'?x.fa:L=='ar'?x.ar:x.en;
+const iqd=n=>Math.round(n/160/250)*250;
+const price=x=>L=='fa'?x.p.toLocaleString('en')+' '+t('cur'):iqd(x.p).toLocaleString('en')+' '+t('cur');
+const fmt=n=>L=='fa'?n.toLocaleString('en')+' '+t('cur'):iqd(n).toLocaleString('en')+' '+t('cur');
+const num=s=>String(s).replace(/\d/g,d=>L=='en'?d:L=='fa'?'۰۱۲۳۴۵۶۷۸۹'[d]:'٠١٢٣٤٥٦٧٨٩'[d]);
+let cat='all',cart=[],tmr;
+function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('show');clearTimeout(tmr);tmr=setTimeout(()=>e.classList.remove('show'),1600)}
+function imgs(x,cls){return x.im.map((u,i)=>`<img src="${u}" alt="" referrerpolicy="no-referrer" onerror="this.remove();if(!this.parentNode)return" ${i?'':'fetchpriority="low"'}>`).join('')}
+function ph(x){return `<div class="ph" data-l="${(x.br||'R')[0]}" onclick="openP(${x.id})">${x.d?`<span class="tag">-${num(x.d)}٪</span>`.replace('٪',L=='en'?'%':'٪'):''}${x.im.map(u=>`<img src="${u}" alt="" referrerpolicy="no-referrer" onerror="imgErr(this)">`).join('')}</div>`}
+function imgErr(i){const p=i.parentNode;i.remove();if(p&&!p.querySelector('img'))p.classList.add('noimg')}
+function card(x){return `<div class="card">${ph(x)}<div class="cb"><span class="br">${x.br}</span><span class="nm">${name(x)}</span><span class="pr">${price(x)}</span><div class="row"><button onclick="openP(${x.id})">${t('view')}</button><button class="add" onclick="quick(${x.id})">+ ${t('add')}</button></div></div></div>`}
+function list(){const q=$('#q').value.trim().toLowerCase(),s=+$('#sort').value;
+ let a=D.filter(x=>(cat=='all'||x.c==cat)&&(!q||[x.fa,x.ar,x.en,x.br].join(' ').toLowerCase().includes(q)));
+ if(s==1)a.sort((p,q)=>p.p-q.p);if(s==2)a.sort((p,q)=>q.p-p.p);if(s==3)a.sort((p,q)=>q.d-p.d);
+ $('#grid').innerHTML=a.length?a.map(card).join(''):`<div class="empty" style="grid-column:1/-1">${t('none')}</div>`;
+ $('#count').textContent=num(a.length)+' '+t('items')}
+function chips(){const cs=['all','shirt','tee','knit','pants','outer','shoes','acc'];
+ $('#chips').innerHTML=cs.map(c=>`<button class="chip ${c==cat?'on':''}" data-c="${c}">${t(c)}</button>`).join('');
+ $$('#chips .chip').forEach(b=>b.onclick=()=>{cat=b.dataset.c;chips();list()})}
+function strip(){$('#strip').innerHTML=[3,19,40,46,56,60,12,33].filter(i=>D[i]).map(i=>`<div class="sc" onclick="openP(${D[i].id})"><img src="${D[i].im[0]}" referrerpolicy="no-referrer" onerror="this.parentNode.remove()" alt=""></div>`).join('')}
+/* product modal */
+let cur=null,csz=null;
+function needSize(x){return x.z&&x.z.length}
+function openP(id){cur=D.find(x=>x.id==id);csz=null;const x=cur;
+ $('#md').innerHTML=`<button class="x" onclick="closeP()">✕</button><div class="gal"><img id="mg" src="${x.im[0]}" referrerpolicy="no-referrer" alt="">${x.im.length>1?`<div class="th">${x.im.map((u,i)=>`<img src="${u}" referrerpolicy="no-referrer" class="${i?'':'on'}" onclick="$('#mg').src='${u}';$$('.th img').forEach(e=>e.classList.remove('on'));this.classList.add('on')">`).join('')}</div>`:''}</div>
+ <div class="in"><span class="br" style="color:var(--ac);letter-spacing:2px;font-size:12px">${x.br}</span><h3>${name(x)}</h3><div class="pr">${price(x)}${x.d?` <span class="tag" style="position:static;display:inline-block;font-size:12px">${L=='en'?'-':''}${num(x.d)}${L=='en'?'%':'٪'}${L=='en'?'':'-'}</span>`:''}</div>
+ <div><div class="note" style="margin:0 0 6px">${t('size')}</div>${needSize(x)?`<div class="szs">${x.z.map(z=>`<button class="sz" onclick="pickSz(this,'${z}')">${z}</button>`).join('')}</div>`:`<div class="note">${t('free')}</div>`}</div>
+ <button class="btn pri" onclick="addCur()">${t('addc')}</button><button class="btn" onclick="closeP();tryOn(${x.id})">${t('try')} ✦</button></div>`;
+ $('#ov').classList.add('show')}
+function closeP(){$('#ov').classList.remove('show')}
+function pickSz(b,z){csz=z;$$('.sz').forEach(e=>e.classList.remove('on'));b.classList.add('on')}
+function addCur(){if(needSize(cur)&&!csz){toast(t('choose'));return}add(cur.id,csz);closeP()}
+function quick(id){const x=D.find(y=>y.id==id);if(needSize(x)){openP(id);return}add(id,null)}
+function add(id,z,q=1){const k=cart.find(c=>c.id==id&&c.z==z);k?k.q+=q:cart.push({id,z,q});save();toast(t('added'))}
+function save(){try{localStorage.setItem('cart',JSON.stringify(cart))}catch(e){}renderCart()}
+function renderCart(){const n=cart.reduce((a,c)=>a+c.q,0);$('#cnt').textContent=num(n);$('#cnt').style.display=n?'grid':'none';
+ $('#cl').innerHTML=cart.length?cart.map((c,i)=>{const x=D.find(y=>y.id==c.id);return `<div class="ci"><img src="${x.im[0]}" referrerpolicy="no-referrer" alt="" onerror="this.style.visibility='hidden'"><div style="flex:1"><div>${name(x)}</div><div class="note" style="margin:0">${c.z?t('size')+': '+c.z:''}</div><b style="color:var(--sand2)">${fmt(x.p*c.q)}</b><div class="q"><button onclick="qty(${i},-1)">−</button>${num(c.q)}<button onclick="qty(${i},1)">+</button></div></div></div>`}).join(''):`<div class="empty">${t('empty')}</div>`;
+ const tot=cart.reduce((a,c)=>a+D.find(y=>y.id==c.id).p*c.q,0);
+ $('#cf').innerHTML=cart.length?`<div style="display:flex;justify-content:space-between;margin-bottom:10px"><span>${t('sum')}</span><b style="color:var(--sand2);font-size:19px">${fmt(tot)}</b></div><a class="btn wa" style="display:block;text-align:center" target="_blank" rel="noopener" href="${waCart()}">${t('send')}</a>`:''}
+function qty(i,d){cart[i].q+=d;if(cart[i].q<=0)cart.splice(i,1);save()}
+function waCart(){let tot=0;const ls=cart.map((c,i)=>{const x=D.find(y=>y.id==c.id);tot+=x.p*c.q;return `${num(i+1)}. ${name(x)}${c.z?' ['+c.z+']':''} ×${num(c.q)} — ${fmt(x.p*c.q)}`});
+ return 'https://wa.me/'+WA+'?text='+encodeURIComponent(t('wamsg')+'\n'+ls.join('\n')+'\n'+t('sum')+': '+fmt(tot))}
+/* size advisor */
+const LET=['S','M','L','XL','2XL','3XL','4XL'];let bld=2,fitp=2;
+function opts(){$('#obuild').innerHTML=[1,2,3].map(i=>`<button class="opt ${i==bld?'on':''}" data-i="${i}">${t('b'+i)}</button>`).join('');
+ $('#ofit').innerHTML=[1,2,3].map(i=>`<button class="opt ${i==fitp?'on':''}" data-i="${i}">${t('f_'+i)}</button>`).join('');
+ $$('#obuild .opt').forEach(b=>b.onclick=()=>{bld=+b.dataset.i;opts()});$$('#ofit .opt').forEach(b=>b.onclick=()=>{fitp=+b.dataset.i;opts()})}
+function calc(){const h=+$('#sh').value,w=+$('#sw').value;if(!h||!w)return;
+ let sc=w+(h-172)*.35;let k=sc<60?0:sc<72?1:sc<82?2:sc<92?3:sc<102?4:sc<112?5:6;
+ if(bld==3)k++;if(bld==1&&k>0&&w<75)k--;if(fitp==3)k++;if(fitp==1&&k>0)k--;k=Math.max(0,Math.min(6,k));
+ const L1=LET[k];let waist=Math.round((.5*w+50+(bld==3?5:0))/2.54);if(waist%2&&waist>30)waist++;waist=Math.max(28,Math.min(40,waist));
+ const shoe=Math.max(39,Math.min(47,Math.round(h*.25)));
+ const av=D.filter(x=>x.z.includes(L1)||(x.c=='pants'&&x.z.includes(String(waist)))).slice(0,6);
+ $('#sres').innerHTML=`<div class="note" style="margin:0">${t('r_top')}</div><div class="big">${L1}</div>
+ <div class="kv"><div><b>${L1}</b><span>${t('r_top')}</span></div><div><b>${num(waist)}</b><span>${t('r_jean')}</span></div><div><b>${num(shoe)}</b><span>${t('r_shoe')}</span></div></div>
+ <div class="note" style="margin:0 0 4px">${t('r_av')}</div>${av.length?`<div class="mini">${av.map(card).join('')}</div>`:`<div class="note">${t('r_none')}</div>`}`;
+ $('#sres').classList.add('show')}
+/* outfit */
+const SL=[['top',['shirt','tee','knit']],['bot',['pants']],['shoe',['shoes']],['out',['outer']]];let ost='C',oi={};
+function pool(s){const cs=SL.find(a=>a[0]==s)[1];let p=D.filter(x=>cs.includes(x.c)&&x.st.includes(ost));if(!p.length)p=D.filter(x=>cs.includes(x.c));return p}
+function ostyleUI(){$('#ostyle').innerHTML=['F','C','S'].map(s=>`<button class="chip ${s==ost?'on':''}" data-s="${s}">${t('st_'+s)}</button>`).join('');$$('#ostyle .chip').forEach(b=>b.onclick=()=>{ost=b.dataset.s;oi={};ostyleUI();outfit()})}
+function outfit(){$('#slots').innerHTML=SL.map(([s])=>{const p=pool(s);const i=((oi[s]||0)%p.length+p.length)%p.length;oi[s]=i;const x=p[i];
+ return `<div class="slot"><div class="ph" data-l="${x.br[0]}"><span class="sl">${t('sl_'+s)}</span>${x.im.slice(0,1).map(u=>`<img src="${u}" referrerpolicy="no-referrer" onerror="imgErr(this)" alt="">`).join('')}</div><div class="nv"><button onclick="nv('${s}',-1)">${L=='en'?'‹':'›'}</button><span>${name(x)}<br><b style="color:var(--sand2)">${price(x)}</b></span><button onclick="nv('${s}',1)">${L=='en'?'›':'‹'}</button></div></div>`}).join('');
+ $('#otot').textContent=fmt(cur_out().reduce((a,x)=>a+x.p,0))}
+function cur_out(){return SL.map(([s])=>{const p=pool(s);return p[((oi[s]||0)%p.length+p.length)%p.length]})}
+function nv(s,d){oi[s]=(oi[s]||0)+d;outfit()}
+</script>
+<script src="tryon.js"></script>
+<script>
+/* i18n */
+function apply(){const h=document.documentElement;h.lang=L;h.dir=L=='en'?'ltr':'rtl';
+ $$('[data-t]').forEach(e=>e.textContent=t(e.dataset.t));$$('[data-th]').forEach(e=>e.innerHTML=t(e.dataset.th));$$('[data-ph]').forEach(e=>e.placeholder=t(e.dataset.ph));
+ $$('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l==L));$('#thint').textContent=t('thint');
+ $('#barwa').href='https://wa.me/'+WA;chips();list();opts();ostyleUI();outfit();renderCart();if($('#sres').classList.contains('show'))calc();pickUI()}
+$$('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem('lg',L)}catch(e){}apply()});
+$('#q').oninput=list;$('#sort').onchange=list;$('#sgo').onclick=calc;$('#oshuf').onclick=()=>{SL.forEach(([s])=>oi[s]=Math.floor(Math.random()*99));outfit()};
+$('#oadd').onclick=()=>{cur_out().forEach(x=>add(x.id,x.z&&x.z.length?x.z[Math.floor(x.z.length/2)]:null))};
+$('#cartBtn').onclick=$('#barcart').onclick=()=>$('#dr').classList.add('show');$('#dx').onclick=()=>$('#dr').classList.remove('show');
+$('#ov').onclick=e=>{if(e.target.id=='ov')closeP()};
+try{cart=JSON.parse(localStorage.getItem('cart')||'[]').filter(c=>D.find(y=>y.id==c.id))}catch(e){cart=[]}
+strip();apply();if(location.protocol==='file:')stat(t('e_file'));
+</script>
+</body>
+</html>
