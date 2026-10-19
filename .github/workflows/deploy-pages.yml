@@ -1,0 +1,66 @@
+name: Deploy REDA to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reda-site-source.zip'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out release
+        uses: actions/checkout@v6
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Verify and unpack the tested site
+        shell: bash
+        run: |
+          echo "1ac2540e94a6210fe3532eaeef02cf0fae38c96f609e95ff180cb08e6aeec843  reda-site-source.zip" | sha256sum --check
+          mkdir _site
+          unzip -q reda-site-source.zip -d _site
+      - name: Download pinned official MediaPipe assets and verify hashes
+        shell: python
+        run: |
+          import hashlib, json, pathlib, urllib.request
+          root = pathlib.Path('_site')
+          assets = json.loads((root/'models/assets-manifest.json').read_text())
+          for asset in assets:
+              path = root / asset['file']
+              path.parent.mkdir(parents=True, exist_ok=True)
+              with urllib.request.urlopen(asset['url'], timeout=120) as response:
+                  data = response.read()
+              assert len(data) == asset['bytes'], asset['file']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256'], asset['file']
+              path.write_bytes(data)
+              print('Verified', asset['file'], len(data))
+      - name: Check deploy files
+        shell: bash
+        run: |
+          test -s _site/index.html
+          test -s _site/tryon.js
+          test -s _site/models/pose_landmarker_lite.task
+          test -s _site/models/selfie_multiclass_256x256.tflite
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+
